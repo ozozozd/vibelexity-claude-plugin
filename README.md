@@ -29,11 +29,48 @@ Or analyze a specific directory:
 /vibelexity path/to/directory
 ```
 
+## Development
+
+### Publishing vibelexity to PyPI
+
+```bash
+cd vibelexity
+uv build
+uv publish
+```
+
+First, create a PyPI account and API token, then save credentials in `~/.config/pypirc`.
+
+### Publishing this plugin to GitHub
+
+```bash
+cd vibelexity-claude-plugin
+git clone https://github.com/ozozozd/vibelexity-claude-plugin.git
+```
+
+## Testing
+
+The plugin has been tested with:
+- `test-vibelexity-plugin/` sample project
+- Shell installer script
+- uvx execution fallback
+
+Run the included test:
+```bash
+test-vibelexity-plugin/test-plugin.sh
+```
+
 ## Dependencies
 
 The plugin automatically installs vibelexity on first use:
-- Prefers `uvx vibelexity` if uv is available
+- Prefers `uvx vibelexity` if uv is available and vibelexity is on PyPI
 - Falls back to shell installer that installs vibelexity as a uv tool
+
+**Note for development**: If vibelexity is not on PyPI yet, install it locally:
+```bash
+cd vibelexity
+uv pip install -e ~/.local/share/uv/tools/vibelexity
+```
 
 ## Metrics
 
