@@ -4,11 +4,11 @@ Analyze codebase for cognitive complexity, maintainability issues, and code heal
 
 ## Instructions
 
-First, check if `uvx` is available and run the analysis. If uvx is not available, download and install vibelexity using the shell installer.
+First, check if `uvx` is available and vibelexity is on PyPI. If uvx is not available or vibelexity is not found, download and install vibelexity using the shell installer.
 
 ```bash
 # Try uvx first
-if command -v uvx &> /dev/null; then
+if command -v uvx &> /dev/null && uvx vibelexity --version &> /dev/null; then
     uvx vibelexity "${ARGUMENTS:-.}"
 else
     # Install using shell script

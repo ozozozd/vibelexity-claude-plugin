@@ -21,16 +21,17 @@ else
     UV_CMD="uv"
 fi
 
-# Install vibelexity
-INSTALL_DIR="$HOME/.local/share/uv/tools/vibelexity"
-mkdir -p "$HOME/.local/bin"
-
+# Install vibelexity via uv tool
 echo "Installing vibelexity..."
 "$UV_CMD" tool install vibelexity --python 3.11
 
-# Create symlink in ~/.local/bin
+# Create symlink
+INSTALL_DIR="$HOME/.local/share/uv/tools/vibelexity"
+mkdir -p "$HOME/.local/bin"
+
 if [ ! -L "$HOME/.local/bin/vibelexity" ]; then
     ln -sf "$INSTALL_DIR/bin/vibelexity" "$HOME/.local/bin/vibelexity" 2>/dev/null || true
+    ln -sf "$INSTALL_DIR/VIBELEXITY_EXE" "$HOME/.local/bin/vibelexity" 2>/dev/null || true
 fi
 
 echo "vibelexity installed successfully"
