@@ -1,0 +1,16 @@
+{
+  "name": "vibelexity",
+  "owner": {
+    "name": "ozozozd"
+  },
+  "metadata": {
+    "description": "Cognitive complexity analyzer for Python, TypeScript, and Go source files"
+  },
+  "plugins": [
+    {
+      "name": "vibelexity",
+      "source": "./plugins/vibelexity",
+      "description": "Analyze cognitive complexity, maintainability, and code health"
+    }
+  ]
+}

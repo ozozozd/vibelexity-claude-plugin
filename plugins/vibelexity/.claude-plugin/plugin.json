@@ -1,0 +1,7 @@
+{
+  "name": "vibelexity",
+  "description": "Cognitive complexity analyzer for Python, TypeScript, and Go source files",
+  "version": "1.0.0",
+  "keywords": ["complexity", "cognitive", "python", "typescript", "go", "maintainability"],
+  "license": "ISC"
+}
