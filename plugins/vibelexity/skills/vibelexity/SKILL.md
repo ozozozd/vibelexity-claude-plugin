@@ -1,5 +1,6 @@
 ---
-description: Vibelexity Complexity Metrics
+name: vibelexity
+description: Vibelexity guides agents to produce good code.
 ---
 
 Cognitive complexity metrics for code health assessment.

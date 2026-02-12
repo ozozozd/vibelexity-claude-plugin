@@ -1,0 +1,1 @@
+plugins/vibelexity/skills/vibelexity/SKILL.md
